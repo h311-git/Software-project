@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<body>
+ {{!-- <style>
+body {
+  background-image: url('/images/se1.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-size: 100% 105%;
+}
+</style> --}}
+<div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="/images/se1.webp">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Learning never ends!<i class="material-icons right">format_list_bulleted</i></span>
+       <div class="progress">
+      <div class="indeterminate"></div>
+  </div>   
+    </div>
+    <div class="card-reveal"> 
+    <span class="card-title grey-text text-darken-4">
+      <i class="material-icons right">close</i></span>
+
+ 
+    <div class="card course">
+      <h3 style="color: white;">{{name}}</h3>
+      <hr>
+      <div class="card quiz">
+      <h4 style="color: white;">Quizzes</h4>
+      <p>{{title}}</p>
+      <a href="/quiz" class="waves-effect waves-light btn-small">
+        <i class="material-icons right">launch</i>Participate in Quiz</a>
+      </div>
+
+    </div>
+    </div>
+  </div>
+</body>
+</html>

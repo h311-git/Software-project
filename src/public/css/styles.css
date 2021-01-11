@@ -1,0 +1,43 @@
+.card {
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.course {
+  display: block;
+  border-radius: 10px 10px 10px 10px;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 10;
+  width: 75%;
+  height: 550px;
+  margin-top: 100px;
+  margin-left: 200px;
+  background-color: rgb(7, 168, 141);
+}
+
+.image {
+  background-size: cover;
+}
+
+.quiz {
+  background-color: rgb(7, 168, 141);
+  border-radius: 10px 10px 10px 10px;
+  height: 65px;
+  width: 50%;
+  height: 300px;
+  margin-top: 100px;
+}
+
+.navpar {
+  margin-left: 170px;
+}
