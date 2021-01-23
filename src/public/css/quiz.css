@@ -69,3 +69,9 @@ button:hover {
   text-align: center;
   font-weight: 300;
 }
+
+.navigation {
+  background-color: rgb(65, 75, 70);
+  height: 60px;
+  padding: 17px;
+}
