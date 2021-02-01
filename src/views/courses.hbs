@@ -35,14 +35,16 @@ body {
 
  
     <div class="card course">
-      <h3 style="color: white;">{{name}}</h3>
+      <h3 style="color: white;">Software Engineering</h3>
       <hr>
-      <div class="card quiz">
-      <h4 style="color: white;">Quizzes</h4>
-      <p>{{title}}</p>
+      <h4 style="color: white;">Quiz</h4>
+      {{#ifCond quizTime now}}
+      <p>This Exam will begin in {{time}}</p>
+      {{else}}
+      <p>Exam has started!</p>
+      {{/ifCond}}
       <a id="participate"  class="waves-effect waves-light btn-small">
         <i class="material-icons right">launch</i>Participate in Quiz</a>
-      </div>
 
     </div>
     </div>

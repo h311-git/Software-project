@@ -7,6 +7,7 @@ const exphbs = require("express-handlebars");
 const router = require("./routers/index.js");
 const courseRouter = require("./routers/course");
 const path = require("path");
+const exhbs = require("express-handlebars");
 const quizRouter = require("./routers/quiz");
 dotenv.config({ path: "./config/config.env" });
 
@@ -21,6 +22,7 @@ app.engine(
     extname: ".hbs",
   })
 );
+
 app.set("view engine", "hbs");
 app.set("views", "src/views");
 app.use(morgan("dev"));
@@ -28,6 +30,14 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", router);
 app.use("/courses", courseRouter);
 app.use("/quiz", quizRouter);
+const hbs = exhbs.create();
+hbs.handlebars.registerHelper("ifCond", function (v1, v2, options) {
+  if (v1 > v2) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
+
 (async () => {
   try {
     if (await client.initDb()) {
